@@ -18,19 +18,6 @@
             style="position: absolute; left: 5.5px; top: 300px; background-color: rgb(0, 0, 0); width: 100px; height: 100px; opacity: 0.2; border: 1px solid rgb(204, 204, 204); cursor: crosshair; display: none;">
         </div>
       </div>
-    
-      <!-- phóng to ảnh sản phẩm -->
-      <script type="text/javascript">
-        $(document).ready(function() {
-          $('.show').zoomImage();
-          $(".imgProductSmall").click(function(){
-            let imgAppearence = $(this).attr("src");
-            $('.imgProduct').attr('src', imgAppearence)
-            $('#show-img').attr('src', $(this).attr('src'))
-            $('#big-img').attr('src', $(this).attr('src'))
-          });
-        });
-      </script>
     </div>
 
       <div class="col-md-5 m-3 p-3">
@@ -90,9 +77,9 @@
     </div>
 
     <div style="height: 60px;">
-      <button class="tablink" onclick="openTab('ChinhSachDoiTra', this, '3px solid red')" id="defaultOpen"><b>Chính sách đổi trả</b></button>
-      <button class="tablink" onclick="openTab('ThongTinVanChuyen', this, '3px solid red')"><b>Thông tin vận chuyển</b></button>
-      <button class="tablink" onclick="openTab('ThongTinThanhToan', this, '3px solid red')"><b>Thông tin thanh toán</b></button>
+      <button class="tablink" onclick="openTab('ChinhSachDoiTra', this, '3px solid red')" id="defaultOpen" style="outline: none"><b>Chính sách đổi trả</b></button>
+      <button class="tablink" onclick="openTab('ThongTinVanChuyen', this, '3px solid red')" style="outline: none"><b>Thông tin vận chuyển</b></button>
+      <button class="tablink" onclick="openTab('ThongTinThanhToan', this, '3px solid red')" style="outline: none"><b>Thông tin thanh toán</b></button>
     </div>
     
     <div id="ChinhSachDoiTra" class="tabcontent  bg-light">
@@ -128,28 +115,4 @@
       </ul>  
 
     </div>  
-    <!-- mở tab hiển thị chính sách bán hàng của web -->
-    <script>
-    function openTab(tabName,elmnt,color) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      
-     
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.border = "";
-      }
-      
-      document.getElementById(tabName).style.display = "block";
-      
-      elmnt.style.borderBottom = color;
-
-    }
-    //
-    document.getElementById("defaultOpen").click();
-
-    </script>
   </div>

@@ -1,15 +1,13 @@
 let createFilterStatus = (currentStatus) => {
     let statusFilter = [
-        {name: 'Danh mục sản phẩm', value:'',link:'#', class: 'white'},
-        {name: 'Thời trang nam', value:'thoi-trang-nam',link:'#', class: 'white'},
-        {name: 'Thời trang nữ', value:'thoi-trang-nu',link:'#', class: 'white'},
-        {name: 'Thời trang trẻ em', value:'thoi-trang-tre-em',link:'#', class: 'white'},
-        {name: 'Giày thể thao', value:'giay-the-thao',link:'#', class: 'white'},
-        {name: 'Phụ kiện đi kèm', value:'phu-kien-di-kem',link:'#', class: 'white'},
-        {name: 'Đồ cũ', value:'do-cu',link:'#', class: 'white'},
-      // {name: 'Thời trang và phụ kiện', value:'thoi-trang-va-phu-kien',link:'#', class: 'white'},
-      // {name: 'Thiết bị điện tử', value:'thiet-bi-dien-tu',link:'#', class: 'white'},
-      // {name: 'Đồ gia dụng', value:'do-gia-dung',link:'#', class: 'white'}
+      //   {name: 'Danh mục sản phẩm', value:'',link:'#', class: 'white'},
+        {name: 'Thời trang nam', value:['Áo-thun', 'Áo-sơ-mi-nam', 'Áo-len', 'Áo-khoác-/vest-nam', 'Đồ-bộ-mặc-ở nhà', 'Quần-nam'],link:'#', class: 'white'},
+        {name: 'Thời trang nữ', value:['Áo-phông', 'Đầm', 'Chân-váy', 'áo-sơ-mi-nữ', 'Áo-khoác-/Áo-vest-nữ', 'Đồ-thể-thao', 'quần-nữ'],link:'#', class: 'white'},
+        {name: 'Thời trang trẻ em', value:['Giày-dép', 'Bé-gái-4-tới-14-tuổi', 'bé-gái-3-tới-4-tháng-tuổi', 'Bé-trai-4-tới-14-tuổi', 'bé-trai-3-tới-4-tháng-tuổi'],link:'#', class: 'white'},
+        {name: 'Giày dép nữ', value:['Giày-đế-bằng', 'Giày-cao-gót', 'Giày-thể-thao-nữ', 'Sandal-nữ'],link:'#', class: 'white'},
+        {name: 'Giày dép nam', value:['Giày-da', 'Giày-thể-thao-nam', 'Sandal-nam'],link:'#', class: 'white'},
+        {name: 'Đồ cũ', value:['Đồ-cũ'],link:'#', class: 'white'},
+      
       ];
     
       statusFilter.forEach((item, index) => {  

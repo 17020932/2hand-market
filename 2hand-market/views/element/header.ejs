@@ -4,14 +4,21 @@
 <title><%= title %></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" media="screen" href="./style/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  
 <style>
     .img-size {
-        height: 500px;
+        height: 450px;
+        /* width: 180px; */
     }
     .card:hover {
-        border: 1px solid red;
+        /* border: 1px solid red; */
+        transform: scale(1.05);
+        z-index: 999;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+
+    
 
     .tablink {
         background-color: white;
@@ -72,5 +79,55 @@
       margin: 7px;
       padding: 5px
      }
+
+
+     /* Fixed sidenav, full height */
+    .sidenav {
+      height: 100%;
+      width: 200px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+
+    /* Style the sidenav links and the dropdown button */
+    .sidenav a, .dropdown-btn {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #818181;
+      display: block;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    /* On mouse-over */
+    .sidenav a:hover, .dropdown-btn:hover {
+      color: chocolate;
+    }
+    /*  */
+
+    .qty-header {
+      text-decoration: none;
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      text-align: center;
+      margin-top: 2.5%;
+      margin-left: -0.75%;
+      background: #dc3545;
+      border-radius: 50%;
+      color: white;
+      line-height: 25px;
+      font-size: 14px;
+    }
 
 </style>

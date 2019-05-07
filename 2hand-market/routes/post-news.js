@@ -4,6 +4,7 @@ var multer = require('multer');
 var path = require('path');
 
 var itemsModel = require('./../schemas/items');
+const fileHelper = require('./../helper/uploadimg');
 
 
 /* GET home page. */
@@ -13,16 +14,7 @@ router.get('/', function (req, res, next) {
   });
 });
 
-var storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, __pathUploads )
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
-  }
-})
-
-const upload = multer({storage : storage}).single('photos');
+var upload = fileHelper.uploadFile('photos', 4, 'articles', 20, 10, 'png|jpg');
 
 router.post('/save', (req, res, next)=>{
   upload(req, res, function (err) {
@@ -32,18 +24,19 @@ router.post('/save', (req, res, next)=>{
       // An unknown error occurred when uploading.
     }
     //req.files = JSON.parse(JSON.stringify(req.file));
-    
-    console.log(req.file.filename);
-    console.log(req.body);
+    var link_img = [];
+     for(let i=0; i< req.files.length; i++) {
+      link_img.push('./img/articles/'+ req.files[i].filename);
+     }
 
     let item = {
       name: req.body.topic,
-      category: 'do-cu',
+      category: 'Đồ-cũ',
       type: ' ',
-      status: ' ',
+      status: 1,
       price: req.body.price,
       desc: req.body.content,
-      link_img: './img/' + req.file.filename
+      link_img: link_img
     }
 
     new itemsModel(item).save().then(()=>{

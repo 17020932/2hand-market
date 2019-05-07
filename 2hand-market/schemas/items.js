@@ -5,20 +5,11 @@ var itemsSchemas = new mongoose.Schema({
     category: String,
     type: String,
     status: Number,
-    price: String,
+    price: Number,
     desc: String,
     origin: String,
     place: String,
     link_img: []
-
-    // product : {
-    //     name: String,
-    //     price: String,
-    //     desc: String,
-    //     status: Number,
-    //     img: []
-    // },
-    // category : String
 
 });
 
