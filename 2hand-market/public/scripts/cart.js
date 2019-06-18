@@ -81,6 +81,11 @@ $(document).ready(function(){
         $(".step1 i").removeClass("bg-danger");
         $(".step2 i").addClass("bg-danger");
         $(".step3 i").removeClass("bg-danger");
+  });
+
+  $('#order-button').click(function() {
+      alert("Đặt hàng thành công");
+      localStorage.setItem('cart', []);
   })
 });
 
